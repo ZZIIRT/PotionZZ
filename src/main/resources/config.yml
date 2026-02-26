@@ -1,0 +1,63 @@
+# -------------------------------------------------------
+#                    PotionZZ by ZZII
+#                  Telegram: @zzrtk
+# -------------------------------------------------------
+
+# Формат эффектов: ТИП:УРОВЕНЬ:ДЛИТЕЛЬНОСТЬ_В_СЕКУНДАХ
+# Уровни: 0 = I, 1 = II, 2 = III и т.д.
+#
+# Доступные эффекты:
+#   SPEED, SLOW, FAST_DIGGING, SLOW_DIGGING, INCREASE_DAMAGE
+#   HEAL, HARM, JUMP, NAUSEA, REGENERATION, DAMAGE_RESISTANCE
+#   FIRE_RESISTANCE, WATER_BREATHING, INVISIBILITY, BLINDNESS
+#   NIGHT_VISION, HUNGER, WEAKNESS, POISON, WITHER
+#   HEALTH_BOOST, ABSORPTION, SATURATION
+#   GLOWING, LEVITATION, LUCK, UNLUCK       (1.9+)
+#   SLOW_FALLING, CONDUIT_POWER             (1.13+)
+#   BAD_OMEN, HERO_OF_THE_VILLAGE           (1.14+)
+#   DARKNESS                                (1.19+)
+
+# -------------------------------------------------------
+#  ЗЕЛЬЯ
+# -------------------------------------------------------
+
+potions:
+
+  leto:
+    name: "&e&lОТВАР ЛЕТО"
+    lore:
+      - ""
+      - "&e▸ &fСопротивление I &7(&e1:00&7)"
+      - "&e▸ &fРегенерация I &7(&e1:00&7)"
+      - ""
+    color: "253,245,0"
+    hideAttributes: true
+    splash_potion: false
+    effects:
+      - "DAMAGE_RESISTANCE:0:60"
+      - "REGENERATION:0:60"
+
+  vedma:
+    name: "&8&lОТВАР ВЕДЬМЫ"
+    lore:
+      - ""
+      - "&8▸ &fЗамедление III &7(&81:00&7)"
+      - "&8▸ &fСлепота I &7(&80:15&7)"
+      - ""
+    color: "105,105,105"
+    hideAttributes: true
+    splash_potion: true
+    effects:
+      - "SLOW:2:60"
+      - "BLINDNESS:0:15"
+
+# -------------------------------------------------------
+#  СООБЩЕНИЯ
+# -------------------------------------------------------
+
+messages:
+  no_permission:  "&6&l(ЗЕЛЬЯ) &fУ вас нет &6прав &fдля использования этой команды."
+  usage:          "&6&l(ЗЕЛЬЯ) &fИспользование: &6/zpotion give <игрок> <зелье>"
+  player_not_found: "&6&l(ЗЕЛЬЯ) &fИгрок &6не найден."
+  potion_not_found: "&6&l(ЗЕЛЬЯ) &fЗелье &6не найдено."
+  potion_received:  "&6&l(ЗЕЛЬЯ) &fВы &6получили &f%potion%."
